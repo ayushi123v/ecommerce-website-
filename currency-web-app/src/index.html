@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Currency Converter</h1>
+        <label for="currency-select">Select Currency:</label>
+        <select id="currency-select">
+            <option value="USD">USD</option>
+            <option value="INR">INR</option>
+        </select>
+
+        <div class="prices">
+            <p>Price 1: <span class="price" data-usd="20">20 USD</span></p>
+            <p>Price 2: <span class="price" data-usd="50">50 USD</span></p>
+            <p>Price 3: <span class="price" data-usd="100">100 USD</span></p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

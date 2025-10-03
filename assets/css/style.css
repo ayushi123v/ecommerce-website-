@@ -2478,8 +2478,6 @@ footer {
 
   .footer-nav-list:last-child { display: none; }
 
-  .footer-bottom { margin-bottom: 0; }
-
 }
 
 
@@ -2570,8 +2568,6 @@ footer {
    * #BLOG
    */
 
-  .blog { margin-bottom: 50px; }
-  
   .blog-card { min-width: calc(25% - 22.5px); }
 
 
@@ -2628,4 +2624,11 @@ footer {
     max-width: 460px;
   }
 
+}
+
+/* Add to your CSS file */
+#currency-select {
+  padding: 5px 10px;
+  font-size: 1rem;
+  border-radius: 5px;
 }

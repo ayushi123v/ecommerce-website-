@@ -86,3 +86,30 @@ for (let i = 0; i < accordionBtn.length; i++) {
   });
 
 }
+
+const conversionRates = {
+  usd: 1,
+  inr: 83 // 1 USD = 83 INR
+};
+
+const currencySymbols = {
+  usd: '$',
+  inr: '₹'
+};
+
+function updatePrices(selectedCurrency) {
+  document.querySelectorAll('.price').forEach(priceEl => {
+    const usdValue = parseFloat(priceEl.getAttribute('data-usd'));
+    const converted = usdValue * conversionRates[selectedCurrency];
+    // Format price to 2 decimals for INR, keep .00 for USD
+    priceEl.textContent = currencySymbols[selectedCurrency] + 
+      (selectedCurrency === 'usd' ? usdValue.toFixed(2) : converted.toFixed(2));
+  });
+}
+
+document.getElementById('currency-select').addEventListener('change', function() {
+  updatePrices(this.value);
+});
+
+// Initialize prices on page load
+updatePrices(document.getElementById('currency-select').value);
